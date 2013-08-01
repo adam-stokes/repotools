@@ -1,20 +1,9 @@
 ## repotools
 
-Used within sbuild environments in order to load packages that may be newer or
-non existent in the archives.
+Clone git@github.com:battlemidget/repotools.git into $HOME/ubuntu/repo
 
-```perl
-# -*- mode: perl -*-
+Read this [SimpleSbuild](https://wiki.ubuntu.com/SimpleSbuild) article
+for information on configuring your sbuild environment.
 
-$external_commands = {
-    "pre-build-commands" => [
-        ['/home/barry/ubuntu/repo/scan.sh'],
-    ],
-    "chroot-setup-commands" => [
-        ['/home/barry/ubuntu/repo/prep.sh'],
-    ],
-};
-
-# For Perl
-1;
-```
+This pertains to the local packages setup where the paths should be
+taken care of with environment variables.
